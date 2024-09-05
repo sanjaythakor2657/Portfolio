@@ -1,0 +1,57 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to bottom right, #74ebd5, #acb6e5);
+    font-family: 'Arial', sans-serif;
+}
+
+.game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+canvas {
+    border: 3px solid #333;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    background: #fff;
+}
+
+.joystick-container {
+    margin-top: 20px;
+    position: relative;
+}
+
+.joystick {
+    width: 120px;
+    height: 120px;
+    background: radial-gradient(circle, #e0e0e0, #b0b0b0);
+    border-radius: 50%;
+    position: relative;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    border: 2px solid #888;
+}
+
+.joystick-inner {
+    width: 70px;
+    height: 70px;
+    background: radial-gradient(circle, #c0c0c0, #a0a0a0);
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: transform 0.1s ease;
+}
+
+.joystick-inner:hover {
+    background: radial-gradient(circle, #b0b0b0, #909090);
+}
